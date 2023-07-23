@@ -1,0 +1,87 @@
+.container-timer {
+    display: flex;
+    align-items: flex-end;
+    max-width: max-content;
+    margin: auto;
+}
+
+.container-input {
+    margin-right: 20px;
+}
+
+.input {
+    all: unset;
+    cursor: pointer;
+    padding-top: 10px;
+    background-color: #424242;
+    width: 80px;
+    height: 60px;
+    font-size: 60px;
+    text-align: center;
+    vertical-align: text-bottom;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.input:focus {
+    margin-bottom: -4px;
+    border-bottom: 4px solid var(--active-orange);
+}
+
+.name-time {
+    margin-bottom: 0px;
+}
+
+.hours::after {
+    content: "Ч";
+    color: var(--active-orange);
+}
+
+.minuties::after {
+    content: "М";
+    color: var(--active-orange);
+}
+
+.seconds:after {
+    content: "C";
+    color: var(--active-orange);
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.btn {
+    all: unset;
+    cursor: pointer;
+    font-size: 40px;
+    padding: 5px 30px 5px 30px;
+    border-radius: 10px;
+    border: 2px solid var(--active-orange);
+}
+
+.active {
+    background-color: aliceblue;
+}
+
+.error {
+    color: darkred;
+}
+
+.btn-error {
+    border-color: darkred;
+}
+
+.btn-active {
+    box-shadow: inset #f79d010f -3px 8px, inset rgb(0 0 0 / 70%) 0 3px 8px, var(--orange) 0 3px 8px -3px;
+}
+
+.start {
+    margin-right: 20px;
+}
