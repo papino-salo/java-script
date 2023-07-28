@@ -25,7 +25,7 @@
     overflow: hidden;
     display: flex;
     justify-content: end;
-    align-items: center;
+    align-items: flex-end;
     font-size: 30px;
 }
 
@@ -35,7 +35,7 @@
     display: flex;
     justify-content: end;
     align-items: center;
-    font-size: 55px;
+    font-size: 80px;
 }
 
 .display:focus {
