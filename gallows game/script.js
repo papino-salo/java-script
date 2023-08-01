@@ -41,7 +41,7 @@ let tempPointWin = 0
 
 function inputLetters() {
     this.removeEventListener("click", inputLetters)
-    if (countMisstakes < 9) {
+    if (countHP > 0) {
         var indices = [];
         let randomWordSplit = randomWord.split("")
         var element = this.innerHTML.toLowerCase();
@@ -64,20 +64,20 @@ function inputLetters() {
             hangman[countMisstakes].classList.add(`hangman-error-${countMisstakes + 1}`)
             --countHP
             heart.innerHTML = countHP
+            if (countHP == 0) {
+                heart.innerHTML = ""
+                hangman[countMisstakes - 1].classList.add(`hangman-error-${countMisstakes}`)
+                countMisstakes++
+                endGame()
+                containerGallow.addEventListener("click", restartGame)
+            }
             countMisstakes++
         }
         if (pointsWin == tempPointWin) {
             unknownLetters.forEach(el => el.style.color = "#67c539")
             containerGallow.addEventListener("click", restartGame)
         }
-    } else if (countMisstakes == 9) {
-        heart.innerHTML = ""
-        hangman[countMisstakes].classList.add(`hangman-error-${countMisstakes}`)
-        countMisstakes++
-        endGame()
-        containerGallow.addEventListener("click", restartGame)
     }
-
 }
 
 function win() {
