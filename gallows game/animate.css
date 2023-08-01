@@ -1,0 +1,169 @@
+.hangman-error-1 {
+    opacity: 1;
+    animation: animate-hangman-error-1 1s linear 0s both;
+}
+
+@keyframes animate-hangman-error-1 {
+    0% {
+        stroke-dashoffset: 256.0004425048828px;
+        stroke-dasharray: 256.0004425048828px;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 256.0004425048828px;
+    }
+}
+
+@keyframes animate-hangman-error-2 {
+    0% {
+        stroke-dashoffset: 282.4366455078125px;
+        stroke-dasharray: 282.4366455078125px;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 282.4366455078125px;
+    }
+}
+
+.hangman-error-2 {
+    opacity: 1;
+    animation: animate-hangman-error-2 1s linear 0.1s both;
+}
+
+@keyframes animate-hangman-error-3 {
+    0% {
+        stroke-dashoffset: 132px;
+        stroke-dasharray: 132px;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 132px;
+    }
+}
+
+.hangman-error-3 {
+    opacity: 1;
+    animation: animate-hangman-error-3 1s linear 0.2s both;
+}
+
+@keyframes animate-hangman-error-4 {
+    0% {
+        stroke-dashoffset: 47px;
+        stroke-dasharray: 47px;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 47px;
+    }
+}
+
+.hangman-error-4 {
+    opacity: 1;
+    animation: animate-hangman-error-4 1s linear 0.30000000000000004s both;
+}
+
+@keyframes animate-hangman-error-5 {
+    0% {
+        stroke-dashoffset: 123.06001626902123px;
+        stroke-dasharray: 123.06001626902123px;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 123.06001626902123px;
+    }
+}
+
+.hangman-error-5 {
+    opacity: 1;
+    animation: animate-hangman-error-5 1s linear 0.4s both;
+}
+
+@keyframes animate-hangman-error-6 {
+    0% {
+        stroke-dashoffset: 174.36026000976562px;
+        stroke-dasharray: 174.36026000976562px;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 174.36026000976562px;
+    }
+}
+
+.hangman-error-6 {
+    opacity: 1;
+    animation: animate-hangman-error-6 1s linear 0.5s both;
+}
+
+@keyframes animate-hangman-error-7 {
+    0% {
+        stroke-dashoffset: 74.96827697753906px;
+        stroke-dasharray: 74.96827697753906px;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 74.96827697753906px;
+    }
+}
+
+.hangman-error-7 {
+    opacity: 1;
+    animation: animate-hangman-error-7 1s linear 0.6000000000000001s both;
+}
+
+@keyframes animate-hangman-error-8 {
+    0% {
+        stroke-dashoffset: 75.75506591796875px;
+        stroke-dasharray: 75.75506591796875px;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 75.75506591796875px;
+    }
+}
+
+.hangman-error-8 {
+    opacity: 1;
+    animation: animate-hangman-error-8 1s linear 0.7000000000000001s both;
+}
+
+@keyframes animate-hangman-error-9 {
+    0% {
+        stroke-dashoffset: 103.16699981689453px;
+        stroke-dasharray: 103.16699981689453px;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 103.16699981689453px;
+    }
+}
+
+.hangman-error-9 {
+    opacity: 1;
+    animation: animate-hangman-error-9 1s linear 0.8s both;
+}
+
+@keyframes animate-hangman-error-10 {
+    0% {
+        stroke-dashoffset: 103.16698455810547px;
+        stroke-dasharray: 103.16698455810547px;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 103.16698455810547px;
+    }
+}
+
+.hangman-error-10 {
+    opacity: 1;
+    animation: animate-hangman-error-10 linear 0.9s both;
+}
