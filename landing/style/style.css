@@ -1,3 +1,9 @@
+body {
+    color: #EDEDED;
+    background: #132B4D;
+    font-family: 'DM Sans', sans-serif;
+}
+
 html {
     box-sizing: border-box;
 }
@@ -9,13 +15,12 @@ html {
 }
 
 body {
-    background-color: #424242;
-    font-family: "Arial";
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: #EDEDED;
+    background: #132B4D;
+    font-family: 'DM Sans', sans-serif;
     margin: 0;
-    background: linear-gradient(#808080, #3fada8);
-    height: 100vh;
-    display: flex;
-    color: #152532;
 }
 
 .container {
