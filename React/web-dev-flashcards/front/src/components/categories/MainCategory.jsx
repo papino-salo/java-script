@@ -29,7 +29,7 @@ function MainCategory() {
             <SectionCarts>
                 <TitleComp>Выберите категорию теста</TitleComp>
                 <ContainerCart>
-                    {(isCardsLoading ? [...Array(2)] : itemsCategory).map((obj, index) => isCardsLoading
+                    {(isCardsLoading ? [...Array(6)] : itemsCategory).map((obj, index) => isCardsLoading
                         ?
                         <Skeleton
                             sx={{ bgcolor: 'white', borderRadius: "15px" }}

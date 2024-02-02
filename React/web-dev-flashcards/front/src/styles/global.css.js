@@ -46,6 +46,7 @@ const GlobalStyle = {
     `,
     TextShortAnswer: styled.p`
         font-size: 19px;
+        word-wrap: break-word;
     `,
     BtnCommon: styled.button`
         border: solid black 1px;

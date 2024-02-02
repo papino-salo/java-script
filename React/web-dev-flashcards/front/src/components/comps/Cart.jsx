@@ -75,9 +75,11 @@ function Cart(props) {
 
     let CartTextWithSpace = []
     CartText.map((item, index) => {
-        if (index < 7) {
+        if (index < 4) {
             CartTextWithSpace.push(item)
             CartTextWithSpace.push(", ")
+        } else {
+            
         }
     })
     CartTextWithSpace.pop()
@@ -93,6 +95,7 @@ function Cart(props) {
 
             <TittleCart>{TittleText}</TittleCart>
             <p>{CartTextWithSpace}</p>
+            <span>...</span>
         </CartComp>
     )
 }

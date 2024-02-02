@@ -22,7 +22,7 @@ const carts = {
         flex-direction: column;
         position: relative;
         width: 300px;
-        height: 450px;
+        min-height: 450px;
         background: #1c92d2;  /* fallback for old browsers */
         background: -webkit-linear-gradient(to right, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to right, ${props => props.leftColor}, ${props => props.rightColor}); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */

@@ -8,7 +8,6 @@ import ModalUpdate from "../../views/local/ModalUpdate";
 import GlobalStyle from "../../../styles/global.css";
 import { fetchAnswers } from "../../../Redux-state/reducers/showCards";
 import { Skeleton } from '@mui/material';
-import { grey } from "@mui/material/colors";
 
 
 
@@ -35,11 +34,11 @@ function GeneralCategory(props) {
             <SectionCarts>
                 <TitleComp>{tittleCategoryInAnswers}</TitleComp>
                 <ContainerCart>
-                    {(isAnswerLoading ? [...Array(2)] : itemsAnswer).map((obj, index) => isAnswerLoading
+                    {(isAnswerLoading ? [...Array(6)] : itemsAnswer).map((obj, index) => isAnswerLoading
                         ? <Skeleton
-                            sx={{ bgcolor: 'grey.500', borderRadius: "15px" }}
+                            sx={{ bgcolor: 'grey.500', mb: 50}}
                             variant="rectangular"
-                            width={300}
+                            width={30}
                             height={450}
                         />
                         : 

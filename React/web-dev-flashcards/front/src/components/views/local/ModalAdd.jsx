@@ -18,7 +18,7 @@ const defaultBgColor = "linear-gradient(to right,#eef2f3,#8e9eab)"
 
 const ModalAdd = (props) => {
 
-    const forbiddenSymbols = [" ", "Enter", ".", ",", "?", "%", "!", "&", "/", '"', "'", "`"]
+    const forbiddenSymbols = ["#","$", "^", "_","(", ")", "=", ":", ";", "\\", "+", "-", "*", " ", "Enter", ".", ",", "?", "%", "!", "&", "/", '"', "'", "`"]
 
     const [colorLeft, setColorLeft] = useState('#eef2f3'),
         [colorRight, setColorRight] = useState('#8e9eab')
@@ -70,7 +70,7 @@ const ModalAdd = (props) => {
             }}>
                 {
                     showTypeAddCart === "categories"
-                        ? <FormCard 
+                        ? <FormCard
                             backshadow={"#21c762"}
                             backcolor={`linear-gradient(to right,${colorLeft},${colorRight})`} onClick={e => e.stopPropagation()}
                             onSubmit={(event) => { handleSubmitAddCateg(event) }}
@@ -92,6 +92,7 @@ const ModalAdd = (props) => {
                                 variant="outlined"
                                 required
                             />
+                            
                             <Textarea
                                 style={
                                     {
@@ -259,7 +260,7 @@ const ModalAdd = (props) => {
                                         border: "solid 1px black"
                                     }
                                 }
-                                maxRows={5}
+                                maxRows={4}
                                 name="tittle"
                                 placeholder="Введите заголовок"
                                 variant="outlined"
@@ -274,7 +275,7 @@ const ModalAdd = (props) => {
                                         border: "solid 1px black"
                                     }
                                 }
-                                maxRows={5}
+                                maxRows={8}
                                 name="shortAnswer"
                                 placeholder="Введите краткий ответ"
                                 variant="outlined"
@@ -289,7 +290,7 @@ const ModalAdd = (props) => {
                                         border: "solid 1px black"
                                     }
                                 }
-                                maxRows={5}
+                                maxRows={1}
                                 name="linkSourceAnswer"
                                 placeholder="Ссылка на источник"
                                 variant="outlined"

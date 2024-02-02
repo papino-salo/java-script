@@ -24,6 +24,8 @@ function Header() {
     const dispatch = useDispatch()
 
     const hideHomeBtn = () => {
+        dispatch(switchStatusUpdate("disabled"))
+        dispatch(switchStatusRemove("disabled"))
         dispatch(setType("category"))
         dispatch(clearItemsAnswer())
         navigate("/Category")

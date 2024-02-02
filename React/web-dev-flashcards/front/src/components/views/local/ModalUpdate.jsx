@@ -249,7 +249,7 @@ const ModalUpdate = (props) => {
                                     }
                                 }
                                 defaultValue={ tittleAnswer }
-                                maxRows={5}
+                                maxRows={3}
                                 name="tittle"
                                 placeholder="Введите заголовок"
                                 variant="outlined"
@@ -265,7 +265,7 @@ const ModalUpdate = (props) => {
                                     }
                                 }
                                 defaultValue={shortAnswer}
-                                maxRows={5}
+                                maxRows={9}
                                 name="shortAnswer"
                                 placeholder="Введите краткий ответ"
                                 variant="outlined"
@@ -281,7 +281,7 @@ const ModalUpdate = (props) => {
                                     }
                                 }
                                 defaultValue={link}
-                                maxRows={5}
+                                maxRows={1}
                                 name="linkSourceAnswer"
                                 placeholder="Ссылка на источник"
                                 variant="outlined"
