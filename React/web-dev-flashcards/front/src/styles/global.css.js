@@ -28,10 +28,23 @@ const GlobalStyle = {
         text-align: center;
     `,
     TittleCart: styled.h3`
+        min-height: 68px;
         word-wrap: break-word;
         font-size: 23px;
         margin: 0 0 20px 0;
     `,
+    TittleCartCateg: styled.h3`
+        min-height: 68px;
+        word-wrap: break-word;
+        font-size: 30px;
+        margin: 0 0 20px 0;
+    `,
+    TextCardCateg: styled.p`
+        font-size: 18px;
+        &:not(:last-of-type) {
+            margin-bottom: 7px;
+        }
+        `,
     ShadowBG: styled.div`
         z-index: 1;
         display: flex;
