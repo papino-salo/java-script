@@ -68,9 +68,11 @@ function Cart(props) {
 
     const removeAllHoverClass = (target) => {
         setTimeout(() => {
+            console.log(target)
             target.classList.remove("delete-hover")
         }, 300)
         setTimeout(() => {
+            console.log(target)
             target.classList.remove("update-hover")
         }, 300)
     }
