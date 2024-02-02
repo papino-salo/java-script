@@ -32,7 +32,7 @@ function MainCategory() {
                     {(isCardsLoading ? [...Array(6)] : itemsCategory).map((obj, index) => isCardsLoading
                         ?
                         <Skeleton
-                            sx={{ bgcolor: 'white', borderRadius: "15px" }}
+                            sx={{ bgcolor: 'grey.500', borderRadius: "15px", mb: "15px" }}
                             variant="rectangular"
                             width={300}
                             height={450}

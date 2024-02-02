@@ -12,7 +12,7 @@ import { setDataCategoryForUpdate, setLeftColorAnswerForUpdate, setRightColorAns
 import { setTittleCategory } from "../../Redux-state/reducers/showCards";
 
 const { CartComp } = carts
-const { TittleCart } = GlobalStyle
+const { TittleCartCateg, TextCardCateg } = GlobalStyle
 
 function Cart(props) {
 
@@ -58,32 +58,36 @@ function Cart(props) {
 
     const setHoverShadowStatus = (target) => {
         if (statusRemove === "enabled") {
+            console.log(target)
             target.classList.add("delete-hover")
         } else if (statusUpdate === "enabled") {
+            console.log(target)
             target.classList.add("update-hover")
         }
     }
 
     const removeAllHoverClass = (target) => {
         setTimeout(() => {
+            console.log(target)
             target.classList.remove("delete-hover")
         }, 300)
         setTimeout(() => {
+            console.log(target)
             target.classList.remove("update-hover")
         }, 300)
     }
 
-    let CartTextWithSpace = []
-    CartText.map((item, index) => {
+    let tempListTittles = []
+    let sortedListTittles = []
+    CartText.forEach(element => {
+        tempListTittles.push(element)
+    });
+    tempListTittles.sort((a, b) => a.length - b.length).map((item, index) => {
         if (index < 4) {
-            CartTextWithSpace.push(item)
-            CartTextWithSpace.push(", ")
-        } else {
-            
+            sortedListTittles.push(item)
         }
     })
-    CartTextWithSpace.pop()
-
+    
     return (
         <CartComp
             onClick={(event) => actionCardCategory(event.target)}
@@ -93,9 +97,15 @@ function Cart(props) {
             onMouseLeave={(event) => removeAllHoverClass(event.target)}
         >
 
-            <TittleCart>{TittleText}</TittleCart>
-            <p>{CartTextWithSpace}</p>
-            <span>...</span>
+            <TittleCartCateg>{TittleText}</TittleCartCateg>
+            {
+                sortedListTittles.map((element, index) => {
+                    return <TextCardCateg>{element}</TextCardCateg>
+                })
+            }
+            {
+                tempListTittles.length > 4 ? <span>...</span> : <></>
+            }
         </CartComp>
     )
 }
