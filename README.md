@@ -3,4 +3,4 @@
   Для открытия Finmanager постребуется открыть эту папку и ввести в консоль "npm start"
   Для открытия web-dev-flashcards:
     Открыть папку back и ввести в консоль "run start:dev"
-    Открыть папку front и ввести в консоль "npm start"
+    Открыть папку front и ввести в консоль "npm start" 
