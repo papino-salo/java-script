@@ -1,0 +1,68 @@
+.container-banner {
+    display: flex;
+    max-width: 1600px;
+    max-height: 550px;
+    margin-top: 40px;
+    margin: auto;
+    padding: 40px 40px 0 40px;
+}
+
+.Katty-banner {
+    letter-spacing: 7px;
+    font-size: 70px;
+    margin: 0 0 15px 0;
+}
+
+.school-banner {
+    letter-spacing: 5px;
+    font-size: 45px;
+    margin-top: 0;
+}
+
+.container-banner-btn {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.tittle-btn-banner {
+    margin: auto;
+    padding-bottom: 15px;
+    font-size: 20px;
+}
+
+.banner-btn {
+    font-size: 20px;
+    max-width: 265px;
+    min-height: 50px;
+    border-radius: 15px;
+    padding: 0 54px 0 13px;
+}
+
+.banner-btn-1 {
+    margin-right: 30px;
+    margin-bottom: 10px;
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right 13px center;
+    background-color: var(--accent-purple);
+    background-size: 20px 20px;
+}
+
+.banner-btn-2 {
+    border: 2px solid white;
+    background-image: url("../img/play_circle.svg");
+    background-repeat: no-repeat;
+    background-position: right 17px center;
+}
+
+.container-banner-img {
+    margin-bottom: -5px;
+}
+
+.banner-img {
+    max-height: 510px;
+    min-width: 152px;
+}

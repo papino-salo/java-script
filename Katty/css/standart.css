@@ -1,0 +1,83 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body, html {
+    height: 100%;
+}
+
+:root {
+    --accent-purple: #8d369bd9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    color: white;
+    background-color: #222436fa;;
+    margin: 0;
+    /* font-family:Arial, sans-serif; */
+    font-family: century gothic;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.background{
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-image: url('../img/fon.png');
+    opacity: 0.1;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.container {
+    margin: auto;
+    max-width: 1750px;
+}
+
+.container-main {
+    max-width: 1750px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.list-reset {
+    list-style-type: none;
+    padding: 0;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
