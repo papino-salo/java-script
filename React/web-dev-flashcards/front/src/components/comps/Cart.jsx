@@ -67,14 +67,8 @@ function Cart(props) {
     }
 
     const removeAllHoverClass = (target) => {
-        setTimeout(() => {
-            console.log(target)
-            target.classList.remove("delete-hover")
-        }, 300)
-        setTimeout(() => {
-            console.log(target)
-            target.classList.remove("update-hover")
-        }, 300)
+        target.classList.remove("delete-hover")
+        target.classList.remove("update-hover")
     }
 
     let tempListTittles = []
@@ -87,20 +81,27 @@ function Cart(props) {
             sortedListTittles.push(item)
         }
     })
-    
+
     return (
         <CartComp
             onClick={(event) => actionCardCategory(event.target)}
             leftColor={leftColor}
             rightColor={rightColor}
-            onMouseEnter={(event) => setHoverShadowStatus(event.target)}
+            onMouseEnter={(event) => {
+                setHoverShadowStatus(event.target)
+                event.preventDefault()
+            }}
             onMouseLeave={(event) => removeAllHoverClass(event.target)}
         >
 
-            <TittleCartCateg>{TittleText}</TittleCartCateg>
+            <TittleCartCateg
+                onMouseEnter={(event) => {
+                    removeAllHoverClass(event.target)
+                }}
+            >{TittleText}</TittleCartCateg>
             {
                 sortedListTittles.map((element, index) => {
-                    return <TextCardCateg>{element}</TextCardCateg>
+                    return <TextCardCateg onMouseLeave={(event) => removeAllHoverClass(event.target)}>{element}</TextCardCateg>
                 })
             }
             {

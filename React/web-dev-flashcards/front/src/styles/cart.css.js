@@ -30,7 +30,7 @@ const carts = {
         border-radius: 15px;
         margin: 0 0 20px 0;
         cursor: pointer;
-        &:before {
+        &::before {
             transition: ease-in-out 0.2s; 
             border-radius: 15px;
             content: "";
@@ -55,7 +55,7 @@ const carts = {
         };
         &:hover {
             transform: translate(3px, 3px); /* управляет смещением */
-        }
+        };
     `,
     FormCard: styled.form`
         display: flex;

@@ -1,12 +1,15 @@
-"use strict";
-// type rec = IResponseSuccess | IResponseFailed
-// function isSucsess(rec: rec): rec is IResponseSuccess {
-//     return (rec as IResponseSuccess).status === PaymentStatus.Success
-// }
-// function f(rec: rec) {
-//     if (isSucsess(rec)) {
-//         return rec.data.databaseId
-//     } else {
-//         throw new Error(rec.data.errorMessage)
-//     }
-// }
+function b() {
+  let c = 1
+  function g() {
+    console.log(c)
+    return c++
+  }
+  return g
+}
+
+let func = b()
+
+func()
+func()
+func()
+

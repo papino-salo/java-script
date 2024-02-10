@@ -13,7 +13,7 @@ function CartAnswer(props) {
     const { srcLink, TittleText, CartText, idProp, leftColor, rightColor } = props
 
     const statusRemove = useSelector(state => state.removeCard.status),
-          statusUpdate = useSelector(state => state.updateCard.status)
+        statusUpdate = useSelector(state => state.updateCard.status)
 
     const dispatch = useDispatch()
 
@@ -26,7 +26,7 @@ function CartAnswer(props) {
     }
 
     const updateCardAnswer = () => {
-        dispatch(setDataAnswerForApdate({idProp, TittleText, CartText, srcLink, leftColor, rightColor}))
+        dispatch(setDataAnswerForApdate({ idProp, TittleText, CartText, srcLink, leftColor, rightColor }))
         dispatch(switchShowModalUpdate(true))
     }
 
@@ -64,8 +64,14 @@ function CartAnswer(props) {
                 onMouseEnter={(event) => setHoverShadowStatus(event.target)}
                 onMouseLeave={(event) => removeAllHoverClass(event.target)}
             >
-                <TittleCart>{TittleText}</TittleCart>
-                <TextShortAnswer style={{ marginBottom: "auto" }}>{CartText}</TextShortAnswer>
+                <TittleCart onMouseEnter={(event) => {
+                    removeAllHoverClass(event.target)
+                }}>{TittleText}</TittleCart>
+                <TextShortAnswer
+                    onMouseEnter={(event) => {
+                        removeAllHoverClass(event.target)
+                    }}
+                    style={{ marginBottom: "auto" }}>{CartText}</TextShortAnswer>
                 <p>{srcLink}</p>
             </CartComp>
         </>
