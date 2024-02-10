@@ -1,0 +1,93 @@
+Data:
+	Station {
+	    id: number,
+	    price: number,
+	    energyIn: number,
+	    energyOut: number,
+	    usageTime:string ("initial", "late"),
+	    typeResource: {
+		type: hybrid || mono
+		resource: rock || gas || oil || uran
+	    }
+	}
+
+	Аукцион взаимодействует с ценой, добавляет к неё стоьлко, сколько предложил пользователь + предыдущая цена
+
+	Resourse {
+	    id: number,
+	    price: number,
+	    energy: number,
+	    remainsEnergy: number,
+	    type: string ("initial", "additional")
+	}
+
+Окно регистрации при подключении: 
+	Будет выбор иконок и ввод никнейма уникальный)
+
+function register() {
+  let selectedIcon = document.querySelector('input[name="icon"]:checked');
+  let nickname = document.getElementById('nickname').value;
+
+  if (selectedIcon && nickname) { 		// здесь необходимые действия для регистрации, например, отправку данных на сервер
+    
+    console.log("Регистрация успешна!");
+  } else {
+    console.log("Пожалуйста, выберите иконку и введите никнейм.");
+  }
+}
+
+
+Окно подключения людей:
+	Посередине блок из 6 окон, пусто окно выглядит как блок с плюсиком внутри, при нажатии на который
+	будет копироваться реферальная ссылка на подключение к игре
+	
+	При подключении 3+ игроков разблокируется кнопка "Играть" при нажатии на которую будет рендериться уже сам стол
+
+let playerCount = 0;
+const playButton = document.getElementById('button');
+const gameTable = document.getElementById('table');
+
+function increasePlayerCount() {  //проверка и подсчет кол-ва игроков
+  playerCount++;
+  if (playerCount >= 3) {
+    playButton.disabled = false;
+  }
+}
+
+function renderGameTable() {
+  // Рендеринг игрового стола
+  gameTable.style.display = 'block';
+}
+
+playButton.addEventListener('click', renderGameTable);
+
+
+Сервер сохраняет себе временную полную базу данных всех карт с ресурсами и станциями (два массива объектов), и 
+именно с ними будет взаимодействовать игроки
+
+Отделяем карты начальной игры и поздней на два массива
+Отделяем карты доп рессурсов тоже на два массива + и ++
+
+Начало игры:
+	
+	Сервер рандомно преобразует массив начальных станций
+	Отбирает первые 8 станций и сортирует их по стоимости 
+const arr = {
+  { name: id station, price: 10 },
+  { name: id station, price: 5 },
+  { name: id station, price: 15 },
+  { name: id station, price: 8 },
+  { name: id station, price: 12 },
+  { name: id station, price: 7 },
+  { name: id station, price: 9 },
+  { name: id station, price: 6 },
+  { name: id station, price: 11 },
+  { name: id station, price: 14 }
+};
+
+const sortedArr = arr
+  .slice(0, 8) // Отбираем первые 8 станций
+  .sort((a, b) => a.price - b.price); // Сортируем по стоимости
+
+console.log(sortedArr);
+	
